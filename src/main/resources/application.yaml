@@ -1,3 +1,11 @@
 spring:
   application:
     name: flyerwise
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flyerwise
+    username: flyerwise
+    password: flyerwise
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false

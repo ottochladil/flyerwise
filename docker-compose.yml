@@ -1,2 +1,15 @@
 services:
-  
+  db:
+    image: postgres:18
+    container_name: flyerwise_db
+    environment:
+      POSTGRES_DB: flyerwise
+      POSTGRES_USER: flyerwise
+      POSTGRES_PASSWORD: flyerwise
+    ports:
+      - "5432:5432"
+    volumes:
+      - flyerwise-data:/var/lib/postgresql
+
+volumes:
+  flyerwise-data:
